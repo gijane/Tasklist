@@ -5,7 +5,9 @@ module.exports = {
 
   getSingleTask: function(req, res){
     res.send(req.params.id);
+  },
+
+  deleteTask: function(req, res) {
+	res.send(200);
   }
-
-
 };

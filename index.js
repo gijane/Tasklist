@@ -19,7 +19,7 @@ app.put('/tasks/:id', function(req, res){
 	res.status(201);
 });
 
-app.delete('/tasks/:id', function(req, res){
+app.delete('/tasks/:id', api.deleteTask){
 	res.status(201);
 });
 
