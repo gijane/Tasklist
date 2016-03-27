@@ -1,28 +1,29 @@
 
-// callback is a function that is of the format 
+// callback is a function that is of the format
 // 		function(result, error) {
 // 		}
 //
+var tasks = [
+	{
+		id: 1,
+		taskname: 'Task1',
+		description: 'The first task',
+	},
+	{
+		id: 2,
+		taskname: 'Task2',
+		description: 'The second task',
+	},
+	{
+		id: 3,
+		taskname: 'Task3',
+		description: 'The third task',
+	}
+];
 
 module.exports = {
 
-	var tasks = [
-		{
-			id: 1,
-			taskname: 'Task1',
-			description: 'The first task',
-		},
-		{
-			id: 2,
-			taskname: 'Task2',
-			description: 'The second task',
-		},
-		{
-			id: 3,
-			taskname: 'Task3',
-			description: 'The third task',
-		}
-	];
+
 
 	getTasks: function(callback) {
 
@@ -37,7 +38,7 @@ module.exports = {
 		} else {
 			callback(null, { message: 'There is no task with that index in the mock' });
 		}
-		
+
 	},
 
 	createTask: function(task, callback) {

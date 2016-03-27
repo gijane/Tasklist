@@ -1,7 +1,11 @@
+var mock = require('./mockTasksResource');
+
 module.exports = {
 
   getTasks: function(req, res){
-    res.send("Hello world");
+    mock.getTasks(function(result, error){
+      res.send(result);
+  });
   },
 
   getSingleTask: function(req, res){
