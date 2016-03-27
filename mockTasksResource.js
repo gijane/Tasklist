@@ -42,23 +42,11 @@ module.exports = {
 
 	createTask: function(task, callback) {
 
-		if(!task.taskname))
-			callback(null, { message: 'Taskname is missing' });
-		
-		if(!task.description))
-			callback(null, { message: 'Description is missing' });
-
 		callback(task, null);
 
 	},
 
 	updateTask: function(task, callback) {
-
-		if(!task.taskname))
-			callback(null, { message: 'Taskname is missing' });
-		
-		if(!task.description))
-			callback(null, { message: 'Description is missing' });
 
 		callback(task, null);
 
