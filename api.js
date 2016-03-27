@@ -5,6 +5,14 @@ module.exports = {
 
   getSingleTask: function(req, res){
     res.send(req.params.id);
+  },
+
+  createTask: function(req, res){
+    res.send("createTask");
+  },
+
+  updateTask: function(req, res){
+    res.send(req.params.id);
   }
 
 

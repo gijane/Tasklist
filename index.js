@@ -11,13 +11,9 @@ app.get('/tasks', api.getTasks);
 
 app.get('/tasks/:id', api.getSingleTask);
 
-app.post('/tasks', function(req, res){
-	res.status(201);
-});
+app.post('/tasks', api.createTask);
 
-app.put('/tasks/:id', function(req, res){
-	res.status(201);
-});
+app.put('/tasks/:id', api.updateTask);
 
 app.delete('/tasks/:id', function(req, res){
 	res.status(201);
