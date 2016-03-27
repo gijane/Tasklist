@@ -15,7 +15,7 @@ app.post('/tasks', api.createTask);
 
 app.put('/tasks/:id', api.updateTask);
 
-app.delete('/tasks/:id', function(req, res){
+app.delete('/tasks/:id', api.deleteTask){
 	res.status(201);
 });
 
