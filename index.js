@@ -9,7 +9,19 @@ app.get('/tasks', function(req, res){
 	res.status(200);
 });
 
+app.get('/tasks/:id', function(req, res){
+	res.status(200);
+});
+
 app.post('/tasks', function(req, res){
+	res.status(201);
+});
+
+app.put('/tasks/:id', function(req, res){
+	res.status(201);
+});
+
+app.delete('/tasks/:id', function(req, res){
 	res.status(201);
 });
 
