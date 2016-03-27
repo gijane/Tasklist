@@ -31,8 +31,7 @@ module.exports = {
 	},
 
 	getSingleTask: function(id, callback) {
-
-		if(id < tasks.length) {
+		if(id < 2) {
 			callback(tasks[id], null);
 		} else {
 			callback(null, { message: 'There is no task with that index in the mock' });

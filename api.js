@@ -9,7 +9,18 @@ module.exports = {
   },
 
   getSingleTask: function(req, res){
-    res.send(req.params.id);
+    mock.getSingleTask(req.params.id, function(result, error){
+        if(error != null)
+        {
+          res.status(400);
+          res.send(error);
+
+        }
+        else {
+          res.send(result);
+        }
+    })
+
   },
 
   createTask: function(req, res){
