@@ -2,7 +2,8 @@
 // callback is a function that is of the format
 // 		function(result, error) {
 // 		}
-//
+
+
 var tasks = [
 	{
 		id: 1,
@@ -23,8 +24,6 @@ var tasks = [
 
 module.exports = {
 
-
-
 	getTasks: function(callback) {
 
 		callback(tasks, null);
@@ -43,13 +42,35 @@ module.exports = {
 
 	createTask: function(task, callback) {
 
+		if(!task.taskname))
+			callback(null, { message: 'Taskname is missing' });
+		
+		if(!task.description))
+			callback(null, { message: 'Description is missing' });
+
+		callback(task, null);
+
 	},
 
 	updateTask: function(task, callback) {
 
+		if(!task.taskname))
+			callback(null, { message: 'Taskname is missing' });
+		
+		if(!task.description))
+			callback(null, { message: 'Description is missing' });
+
+		callback(task, null);
+
 	},
 
 	deleteTask: function(id, callback) {
+
+		if(id < tasks.length) {
+			callback(tasks[id], null);
+		} else {
+			callback(null, { message: 'There is no task with that index in the mock' });
+		}
 
 	}
 };
