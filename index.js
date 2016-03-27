@@ -4,16 +4,13 @@ var bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
-app.get('/', function(req, res){
-  res.send('hello world hello');
+
+app.get('/tasks', function(req, res){
+	res.status(200);
 });
 
-app.get('/message/:hello', function(req, res){
-  res.send(req.params.hello);
-});
-
-app.post('/', function(req, res){
-  res.send(req.body.taskname + " " + req.body.description);
+app.post('/tasks', function(req, res){
+	res.status(201);
 });
 
 app.listen(3000);
