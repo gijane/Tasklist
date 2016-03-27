@@ -1,4 +1,5 @@
 module.exports = {
+
   getTasks: function(req, res){
     res.send("Hello world");
   },
@@ -13,7 +14,10 @@ module.exports = {
 
   updateTask: function(req, res){
     res.send(req.params.id);
-  }
+  },
 
+  deleteTask: function(req, res) {
+    res.send(req.params.id);
+  }
 
 };
