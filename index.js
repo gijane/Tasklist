@@ -2,8 +2,8 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
-var resource = require('./mockTasksResource');
-//var resource = require('./postgresResource');
+var resource = require('./resources/mockTasksResource');
+//var resource = require('./resources/postgresTasksResource');
 
 var api = require('./api')(resource);
 
