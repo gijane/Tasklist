@@ -2,7 +2,10 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
-var api = require('./api');
+var resource = require('./mockTasksResource');
+//var resource = require('./postgresResource');
+
+var api = require('./api')(resource);
 
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
