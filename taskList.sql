@@ -1,3 +1,4 @@
+
 drop table if exists tl.tasks;
 drop schema if exists tl;
 
@@ -14,3 +15,5 @@ create table tl.tasks (
 insert into tl.tasks (name, description) values ('Task 1', 'The first task, its a good one?');
 
 SELECT * FROM tl.tasks;
+
+
