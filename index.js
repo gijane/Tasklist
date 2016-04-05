@@ -4,8 +4,9 @@ var app = express();
 var bodyParser = require('body-parser');
 var config = require('./config');
 
-var resource = require('./resources/mockTasksResource');
-//var resource = require('./resources/postgresTasksResource');
+
+//var resource = require('./resources/mockTasksResource');
+var resource = require('./resources/postgresTasksResource')(config);
 
 var api = require('./api')(resource);
 

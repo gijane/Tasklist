@@ -1,6 +1,6 @@
 
 module.exports = function (resource) {
-  
+
   return {
 
 	  getTasks: function(req, res){
@@ -24,15 +24,51 @@ module.exports = function (resource) {
 	  },
 
 	  createTask: function(req, res){
-		res.send("createTask");
+      var task = {
+        name: req.body.name,
+        description: req.body.description
+      };
+		resource.createTask(task, function(result, error){
+      if(error)
+      {
+        res.status(401);
+        res.send(error);
+      }
+      else{
+        res.send(result);
+      }
+    })
 	  },
 
 	  updateTask: function(req, res){
-		res.send(req.params.id);
+      var task = {
+        id: req.param.id,
+        name: req.body.taskname,
+        description: req.body.description
+      };
+		resource.updateTask(task, function(result, error){
+      if(error)
+      {
+        res.status(400);
+        res.send(error);
+      }
+      else{
+        res.send(result);
+      }
+    })
 	  },
 
 	  deleteTask: function(req, res) {
-		res.send(req.params.id);
+		resource.deleteTask(req.params.id, function(result, error){
+      if(error)
+      {
+        res.status(400);
+        res.send(error);
+      }
+      else{
+        res.send(result);
+      }
+    })
 	  }
   };
 
